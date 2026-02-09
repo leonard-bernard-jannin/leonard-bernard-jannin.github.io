@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Léonard Bernard-Jannin - Hydrology & Water Resources Expert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-ocean: #0a2e4d;
+            --ocean-blue: #1d5a7d;
+            --water: #2d7fa6;
+            --light-water: #4ba3c9;
+            --surf: #7dc8e3;
+            --foam: #e8f4f8;
+            --paper: #fafcfd;
+            --text: #1a3a4d;
+            --text-light: #4a6b7c;
+            --shadow: rgba(29, 90, 125, 0.12);
+            --shadow-strong: rgba(29, 90, 125, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, var(--paper) 0%, var(--foam) 100%);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(125, 200, 227, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(45, 127, 166, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to top, rgba(29, 90, 125, 0.03), transparent);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            padding: 4rem 0 3rem;
+            position: relative;
+            animation: slideDown 0.9s ease-out;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--water) 20%, var(--ocean-blue) 50%, var(--water) 80%, transparent);
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem;
+            font-weight: 700;
+            color: var(--deep-ocean);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 1.35rem;
+            color: var(--ocean-blue);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .contact-links a {
+            color: var(--water);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            color: var(--ocean-blue);
+            border-bottom-color: var(--light-water);
+        }
+
+        section {
+            margin-bottom: 4.5rem;
+            animation: fadeInUp 0.9s ease-out;
+            animation-fill-mode: both;
+        }
+
+        section:nth-child(1) { animation-delay: 0.15s; }
+        section:nth-child(2) { animation-delay: 0.25s; }
+        section:nth-child(3) { animation-delay: 0.35s; }
+        section:nth-child(4) { animation-delay: 0.45s; }
+        section:nth-child(5) { animation-delay: 0.55s; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--ocean-blue);
+            margin-bottom: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--water), var(--light-water));
+            border-radius: 2px;
+        }
+
+        .about-content {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            max-width: 900px;
+            color: var(--text);
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px var(--shadow);
+            border-left: 5px solid var(--water);
+        }
+
+        .about-content p {
+            margin-bottom: 1.2rem;
+        }
+
+        .experience-item {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--water);
+            box-shadow: 0 3px 15px var(--shadow);
+            border-radius: 6px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(125, 200, 227, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px var(--shadow-strong);
+            border-left-color: var(--ocean-blue);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .job-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--deep-ocean);
+        }
+
+        .date-range {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+            background: var(--foam);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+        }
+
+        .company {
+            font-size: 1.15rem;
+            color: var(--water);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .experience-description {
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .experience-description ul {
+            margin-left: 1.5rem;
+            margin-top: 0.8rem;
+        }
+
+        .experience-description li {
+            margin-bottom: 0.7rem;
+        }
+
+        .experience-description li::marker {
+            color: var(--light-water);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px var(--shadow);
+            border-top: 4px solid var(--water);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px var(--shadow-strong);
+        }
+
+        .skill-category h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--ocean-blue);
+            margin-bottom: 1.3rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.5rem 0;
+            color: var(--text);
+            position: relative;
+            padding-left: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .skill-category li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: var(--light-water);
+            font-size: 0.8rem;
+        }
+
+        .education-item {
+            background: white;
+            padding: 2rem 2.5rem;
+            margin-bottom: 1.8rem;
+            border-left: 5px solid var(--light-water);
+            box-shadow: 0 3px 15px var(--shadow);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .education-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 5px 20px var(--shadow-strong);
+        }
+
+        .degree {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--deep-ocean);
+            margin-bottom: 0.4rem;
+        }
+
+        .school {
+            color: var(--water);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .edu-date {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .publications-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px var(--shadow);
+            border-left: 5px solid var(--water);
+        }
+
+        .pub-link {
+            color: var(--water);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .pub-link:hover {
+            color: var(--ocean-blue);
+            border-bottom-color: var(--ocean-blue);
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .language-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 3px 12px var(--shadow);
+            text-align: center;
+            border-top: 3px solid var(--light-water);
+        }
+
+        .language-name {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--ocean-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .language-level {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 5rem;
+            color: var(--text-light);
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--light-water) 20%, var(--water) 50%, var(--light-water) 80%, transparent);
+        }
+
+        @media print {
+            body { background: white; }
+            body::before, body::after { display: none; }
+            .experience-item, .skill-category, .education-item, .about-content, .publications-content {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+            }
+            .experience-item:hover, .education-item:hover { transform: none; }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 1.8rem; }
+            .experience-header { flex-direction: column; }
+            .container { padding: 0 1.5rem; }
+            .contact-links { gap: 1.5rem; }
+            .about-content { padding: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Léonard Bernard-Jannin</h1>
+            <p class="tagline">PhD in Hydrology | Project Manager & Expert in Integrated Watershed Modeling</p>
+            <div class="contact-links">
+                <a href="mailto:l.bernardjannin@gmail.com">✉ l.bernardjannin@gmail.com</a>
+                <a href="tel:+33617289860">📱 +33 6 17 28 98 60</a>
+                <a href="https://www.linkedin.com/in/l%C3%A9onard-bernard-jannin-9a35497a/" target="_blank">🔗 LinkedIn</a>
+                <a href="https://www.researchgate.net/profile/Leonard-Bernard-Jannin" target="_blank">📚 ResearchGate</a>
+            </div>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2>Profile</h2>
+                <div class="about-content">
+                    <p>As a Doctor of Hydrology, I serve as a Project Manager and expert in integrated watershed modeling and water resources management. With over 10 years of experience on international projects combining hydrology, hydraulics, and biogeochemistry, I focus on operational applications and producing technical deliverables for decision support.</p>
+                    <p>I lead international projects, coordinate multidisciplinary teams, and design integrated modeling chains to analyze the impacts of anthropogenic pressures, management scenarios, and climate change on water systems. My work bridges scientific research with practical solutions for sustainable water management.</p>
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2>Professional Experience</h2>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="job-title">Project Manager – Hydrology & Modeling Lead</h3>
+                        <span class="date-range">Since 2018</span>
+                    </div>
+                    <div class="company">Longline Environment Ltd | United Kingdom</div>
+                    <div class="experience-description">
+                        <p>Leading international environmental modeling projects with focus on integrated watershed and coastal water systems.</p>
+                        <ul>
+                            <li>Managed 9+ international projects (3 in Denmark, 1 in Northern Ireland, 6 completed projects across Denmark, Northern Ireland, and Hong Kong)</li>
+                            <li>Full project coordination: planning, budgeting, human resources management, international meetings with diverse stakeholders (elected officials, engineers, NGOs, public agencies)</li>
+                            <li>Technical lead for hydrology and integrated watershed-coastal water modeling</li>
+                            <li>Modeling and analysis of water, nutrient, and contaminant fluxes; evaluation of development and climate change scenarios</li>
+                            <li>Developed Python/R tools for automation and data processing</li>
+                            <li>Authored technical reports and methodological documents, delivered presentations to institutional partners</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="job-title">Postdoctoral Researcher – Hydrology & Modeling</h3>
+                        <span class="date-range">2016 – 2018</span>
+                    </div>
+                    <div class="company">University of Orléans (ISTO) | France</div>
+                    <div class="experience-description">
+                        <p>Advanced research in wetland hydrology and biogeochemical modeling.</p>
+                        <ul>
+                            <li>Hydro-bio-geochemical modeling of instrumented peatland to simulate water fluxes and dissolved organic carbon dynamics</li>
+                            <li>Analysis of hydrological dynamics and evaluation of site restoration and management scenarios</li>
+                            <li>Development of analysis and visualization tools; production of technical deliverables for institutional partners</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="job-title">PhD Researcher in Hydrology</h3>
+                        <span class="date-range">2012 – 2016</span>
+                    </div>
+                    <div class="company">INPT / ECOLAB | Toulouse, France</div>
+                    <div class="experience-description">
+                        <p>Doctoral research on denitrification modeling in riparian zones.</p>
+                        <ul>
+                            <li>Hydrological and hydraulic modeling of groundwater-river exchanges in alluvial plains</li>
+                            <li>Development and calibration of distributed models (MOHID Land, SWAT) and custom modules in Fortran</li>
+                            <li>Designed and implemented novel modeling approaches to quantify nitrate removal processes, providing actionable insights for water quality management</li>
+                            <li>Published peer-reviewed research demonstrating practical applications of modeling for environmental decision-making</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="job-title">Research Fellow – Climate Change Impacts</h3>
+                        <span class="date-range">2010 – 2012</span>
+                    </div>
+                    <div class="company">University of Aveiro | Portugal</div>
+                    <div class="experience-description">
+                        <p>Investigation of climate change impacts on soil erosion processes.</p>
+                        <ul>
+                            <li>Instrumentation and monitoring of experimental watershed</li>
+                            <li>Analysis and modeling of soil erosion processes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3 class="job-title">Research Internships</h3>
+                        <span class="date-range">2009 – 2010</span>
+                    </div>
+                    <div class="company">IRD BIOEMCO (Vietnam) & INRA CARRTEL (France)</div>
+                    <div class="experience-description">
+                        <ul>
+                            <li><strong>Master Internship (2010), Hanoi, Vietnam:</strong> Impact of extreme rainfall events on agricultural watershed</li>
+                            <li><strong>Master Internship (2009), Thonon-les-Bains, France:</strong> Study of diffuse pollution in rural environments</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Technical Skills & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Hydrological & Hydraulic Modeling</h3>
+                        <ul>
+                            <li>SWAT / SWAT+</li>
+                            <li>HEC-RAS 1D/2D</li>
+                            <li>InfoWorks</li>
+                            <li>Delft3D</li>
+                            <li>TELEMAC</li>
+                            <li>MOHID Land</li>
+                            <li>MODFLOW</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>GIS & Spatial Analysis</h3>
+                        <ul>
+                            <li>QGIS (advanced)</li>
+                            <li>ArcGIS / ArcMap / ArcGIS Pro</li>
+                            <li>Spatial planning & land use analysis</li>
+                            <li>Watershed delineation & characterization</li>
+                            <li>Digital elevation modeling (DEM)</li>
+                            <li>Raster & vector analysis</li>
+                            <li>Spatial data processing & geostatistics</li>
+                            <li>Cartography & map production</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Programming & Data Science</h3>
+                        <ul>
+                            <li>Python (data analysis, automation)</li>
+                            <li>R (statistics, visualization)</li>
+                            <li>Fortran (model development)</li>
+                            <li>MATLAB</li>
+                            <li>Version control (SVN, GitHub)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Project Management</h3>
+                        <ul>
+                            <li>International project coordination</li>
+                            <li>Budget management</li>
+                            <li>Stakeholder engagement</li>
+                            <li>Team leadership</li>
+                            <li>Planio & Redmine</li>
+                            <li>Technical reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="degree">PhD in Hydrology, Hydrochemistry and Environment</div>
+                    <div class="school">INPT / ECOLAB | Toulouse, France</div>
+                    <div class="edu-date">2012 – 2016</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Master's Degree in Hydrogeology, Soils and Environment</div>
+                    <div class="school">University of Avignon | France</div>
+                    <div class="edu-date">2008 – 2010</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Bachelor's Degree in Earth Sciences and Environment</div>
+                    <div class="school">University of Burgundy | Dijon, France</div>
+                    <div class="edu-date">2005 – 2008</div>
+                </div>
+            </section>
+
+            <section id="languages">
+                <h2>Languages</h2>
+                <div class="languages-grid">
+                    <div class="language-item">
+                        <div class="language-name">English</div>
+                        <div class="language-level">Fluent (TOEIC 965/990)</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">French</div>
+                        <div class="language-level">Native</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">Spanish</div>
+                        <div class="language-level">Advanced (C)</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">Portuguese</div>
+                        <div class="language-level">Intermediate (B)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="publications">
+                <h2>Publications & Communications</h2>
+                <div class="publications-content">
+                    <p style="margin-bottom: 1.5rem;">
+                        <strong style="color: var(--ocean-blue); font-size: 1.1rem;">25 publications</strong> (20 peer-reviewed articles, 4 technical reports, 1 data paper) in leading international journals and reports, with <strong>750+ citations</strong>.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        Regular contributor to high-impact journals including <em>Ecological Engineering, Hydrological Processes, Aquaculture, Water</em>, and presenter at international conferences (SWAT, EGU, WSPCC).
+                    </p>
+                    <button id="togglePublications" style="background: var(--water); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: 500; transition: all 0.3s ease;">
+                        View Full Publication List
+                    </button>
+                    <div id="publicationsList" style="display: none; margin-top: 1.5rem;">
+                        
+                        <h4 style="color: var(--ocean-blue); margin-bottom: 1rem; margin-top: 2rem; font-size: 1.2rem;">Technical Reports & Applied Projects:</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 1rem 0; border-bottom: 1px solid var(--foam); line-height: 1.7;">
+                                <strong>1.</strong> Bernard-Jannin, L., Ferreira, J.G., et al. (2025). <em>Hong Kong Deep Bay Oyster Aquaculture Carrying Capacity Assessment</em> (香港后海灣牡蠣養殖承載力評估). The Nature Conservancy Hong Kong. <a href="https://www.deepbay.blue" target="_blank" class="pub-link">Project Website →</a>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid var(--foam); line-height: 1.7;">
+                                <strong>2.</strong> Ferreira, J.G., Bernard-Jannin, L., Cubillo, A.M., et al. (2024). <em>SWELL - Shared Waters Enhancement and Loughs Legacy Final Report</em>. Sustainable management of wastewater, land use and aquaculture in Lough Foyle and Carlingford Lough catchments, Northern Ireland. <a href="https://www.researchgate.net/publication/377656456_SWELL_Final_Report" target="_blank" class="pub-link">ResearchGate →</a>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid var(--foam); line-height: 1.7;">
+                                <strong>3.</strong> Bernard-Jannin, L., Ferreira, J.G., Lencart e Silva, J., Cubillo, A.M., Diedricks, G. (2023). <em>Modelling of Ringkøbing Fjord to support policy-makers for compliance with the EU Water Framework Directive</em>. Ringkøbing-Skjern Municipality, Denmark. <a href="https://www.rksk.dk/Files/Files/Om%20Kommunen/Raad-naevn-syn-kommissioner/Kystvandraad%202023/Bilag-5-LLE-Modelling-of-Ringkobing-Fjord-and-the-catchment-21122023.pdf" target="_blank" class="pub-link">PDF →</a>
+                            </li>
+                            <li style="padding: 1rem 0; border-bottom: 1px solid var(--foam); line-height: 1.7;">
+                                <strong>4.</strong> Ferreira, J.G., Bernard-Jannin, L., Cubillo, A.M., Gomes, D. (2022). <em>Development and application of an ecosystem model for Belfast Lough, Northern Ireland</em>. LWWP Report. <a href="https://www.researchgate.net/publication/360690829_Development_and_application_of_an_ecosystem_model_for_Belfast_Lough_Northern_Ireland_LWWP_Report" target="_blank" class="pub-link">ResearchGate →</a>
+                            </li>
+                        </ul>
+
+                        <h4 style="color: var(--ocean-blue); margin-bottom: 1rem; margin-top: 2rem; font-size: 1.2rem;">Recent High-Impact Publications (2020-2023):</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>5.</strong> Ferreira, J.G., Bernard-Jannin, L., Cubillo, A., et al. (2023). From soil to sea: an ecological modelling framework for sustainable aquaculture. <em>Aquaculture</em> 557, 1-14. <a href="https://doi.org/10.1016/j.aquaculture.2023.739920" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>6.</strong> Aparício, B.A., Nunes, J.P., Bernard-Jannin, L., et al. (2022). Modelling the role of ground-true riparian vegetation for providing regulating services in a Mediterranean watershed. <em>International Soil and Water Conservation Research</em>. <a href="https://doi.org/10.1016/j.iswcr.2022.07.005" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>7.</strong> Gogo, S., Paroissien, J.B., Laggoun-Défarge, F., Antoine, J.M., Bernard-Jannin, L., et al. (2021). The information system of the French Peatland Observation Service. <em>Hydrological Processes</em>, 35(6), e14244. <a href="https://doi.org/10.1002/hyp.14244" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>8.</strong> Bernard-Jannin, L., Laggoun-Défarge, F. (2020). <em>Water table depth dataset collected at La Guette peatland</em>. Zenodo. Long-term monitoring data from 2008 onwards. <a href="https://zenodo.org" target="_blank" class="pub-link">Data Repository →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>9.</strong> Nunes, J.P., Bernard-Jannin, L., Rodríguez-Blanco, M.L., et al. (2020). Impacts of wildfire and post-fire land management on hydrological and sediment processes. <em>Hydrological Processes</em>. <a href="https://doi.org/10.1002/hyp.13926" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>10.</strong> Lucas-Borja, M.E., Carrà, B.G, Nunes, J.P., Bernard-Jannin, L., et al. (2020). Impacts of land-use and climate changes on surface runoff in a tropical forest watershed (Brazil). <em>Hydrological Sciences Journal</em>, 65:11, 1956-1973. <a href="https://doi.org/10.1080/02626667.2020.1787417" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                        </ul>
+
+                        <h4 style="color: var(--ocean-blue); margin-bottom: 1rem; margin-top: 2rem; font-size: 1.2rem;">Key Research Publications (2017-2019):</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>11.</strong> Leroy, F., Gogo, S., Guimbaud, C., Bernard-Jannin, L., et al. (2019). CO₂ and CH₄ budgets and global warming potential modifications in Sphagnum-dominated peat mesocosms. <em>Biogeosciences</em>, 16, 4085-4095. <a href="https://doi.org/10.5194/bg-16-4085-2019" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>12.</strong> Leroy, F., Gogo, S., Guimbaud, C., Francez, A.J., Zocatelli, R., Défarge, C., Bernard-Jannin, L., Laggoun-Défarge, F. (2019). Response of C and N cycles to N fertilization in peat mesocosms. <em>Journal of Environmental Sciences</em>, 77, 264-272. <a href="https://doi.org/10.1016/j.jes.2018.08.005" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>13.</strong> Bernard-Jannin, L., Binet, S., Gogo, S., Leroy, F., Défarge, C., Jozja, N., Zocatelli, R., Perdereau, L., Laggoun-Défarge, F. (2018). Hydrological control of dissolved organic carbon dynamics in a rehabilitated Sphagnum-dominated peatland. <em>Hydrology and Earth System Sciences</em>, 22(9), 4907-4920. <a href="https://doi.org/10.5194/hess-22-4907-2018" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>14.</strong> Nunes, J.P., Bernard-Jannin, L., Rodríguez Blanco, M.L., Santos, J.M., Coelho, C.D.O.A., Keizer, J.J. (2018). Hydrological and erosion processes in terraced fields. <em>Land Degradation & Development</em>, 29, 596-606. <a href="https://doi.org/10.1002/ldr.2550" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>15.</strong> Sun, X., Bernard-Jannin, L., Grusson, Y., Sauvage, S., Arnold, J., Srinivasan, R., Sánchez Pérez, J.M. (2018). Using SWAT-LUD Model to Estimate Water Exchange and Shallow Aquifer Denitrification. <em>Water</em>, 10, 528. <a href="https://doi.org/10.3390/w10040528" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>16.</strong> Sauvage, S., Sánchez-Pérez, J.-M., Vervier, P., Naiman, R.-J., Alexandre, H., Bernard-Jannin, L., et al. (2018). Modelling the role of riverbed compartments in water quality regulation. <em>Ecological Engineering</em>, 118, 19-30. <a href="https://doi.org/10.1016/j.ecoleng.2018.02.018" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>17.</strong> Bernard-Jannin, L., Sun, X., Teissier, S., Sauvage, S., Sánchez-Pérez, J.M. (2017). Spatio-temporal analysis of factors controlling nitrate dynamics and denitrification hot spots in groundwater. <em>Ecological Engineering</em>, 103, 372-384. <a href="https://doi.org/10.1016/j.ecoleng.2015.12.031" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>18.</strong> Sun, X., Bernard-Jannin, L., Sauvage, S., Garneau, C., Arnold, J.G., Srinivasan, R., Sánchez-Pérez, J.M. (2017). Assessment of denitrification in alluvial wetlands using SWAT. <em>Ecological Engineering</em>, 103, 344-358. <a href="https://doi.org/10.1016/j.ecoleng.2016.06.098" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>19.</strong> Leroy, F., Gogo, S., Guimbaud, C., Bernard-Jannin, L., Hu, Z., Laggoun-Défarge, F. (2017). Vegetation composition controls temperature sensitivity of greenhouse gas emissions in peatlands. <em>Soil Biology and Biochemistry</em>, 107, 164-167. <a href="https://doi.org/10.1016/j.soilbio.2017.01.005" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                        </ul>
+
+                        <h4 style="color: var(--ocean-blue); margin-bottom: 1rem; margin-top: 2rem; font-size: 1.2rem;">Earlier Publications (2013-2017):</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>20.</strong> Yao, J., Sánchez-Pérez, J.M., Sauvage, S., Teissier, S., Attard, E., Lauga, B., Duran, R., Julien, F., Bernard-Jannin, L., et al. (2017). Biodiversity and ecosystem purification in alluvial wetlands. <em>Ecological Engineering</em>, 103, 359-371. <a href="https://doi.org/10.1016/j.ecoleng.2016.02.019" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>21.</strong> Comin, F.A., Sánchez-Pérez, J.M., Español, C., Carranza, F., Sauvage, S., Antiguedad, I., et al., Bernard-Jannin, L., et al. (2017). Floodplain capacity to depollute water. <em>Ecological Engineering</em>, 103, 301-314. <a href="https://doi.org/10.1016/j.ecoleng.2016.06.007" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>22.</strong> Bernard-Jannin, L., Brito, D., Sun, X., Jauch, E., Neves, R., Sauvage, S., Sanchez-Pérez, J.M. (2016). Spatially distributed modelling of surface water-groundwater exchanges during overbank floods. <em>Advances in Water Resources</em>, 94, 146-159. <a href="https://doi.org/10.1016/j.advwatres.2016.05.008" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>23.</strong> Antiguedad, I., Zabaleta, A., Martinez-Santos, M., Ruiz, E., Uriarte, J., et al., Bernard-Jannin, L., et al. (2016). Multi-criteria approach to nitrate attenuation zones in alluvial floodplains. <em>Ecological Engineering</em>, 103, 315-331. <a href="https://doi.org/10.1016/j.ecoleng.2016.09.007" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--foam); line-height: 1.6;">
+                                <strong>24.</strong> Sun, X., Bernard-Jannin, L., Sauvage, S., Volk, M., Arnold, J.G., Srinivasan, R., Sánchez-Pérez, J.M. (2016). Improved simulation of river-groundwater exchange using SWAT. <em>Hydrological Processes</em>, 30(2), 187-202. <a href="https://doi.org/10.1002/hyp.10575" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                            <li style="padding: 0.8rem 0; line-height: 1.6;">
+                                <strong>25.</strong> Santos, J.M., Verheijen, F.G.A., Tavares Wahren, F., Wahren, A., Feger, K.-H., Bernard-Jannin, L., et al. (2013). Soil water repellency dynamics in pine and eucalypt plantations in Portugal. <em>Land Degradation & Development</em>, 27, 1334-1343. <a href="https://doi.org/10.1002/ldr.2251" target="_blank" class="pub-link">DOI →</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                document.getElementById('togglePublications').addEventListener('click', function() {
+                    var pubList = document.getElementById('publicationsList');
+                    var button = this;
+                    if (pubList.style.display === 'none') {
+                        pubList.style.display = 'block';
+                        button.textContent = 'Hide Publications';
+                        button.style.background = 'var(--ocean-blue)';
+                    } else {
+                        pubList.style.display = 'none';
+                        button.textContent = 'View Full Publication List';
+                        button.style.background = 'var(--water)';
+                    }
+                });
+                
+                document.getElementById('togglePublications').addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 4px 12px var(--shadow-strong)';
+                });
+                
+                document.getElementById('togglePublications').addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+            </script>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Léonard Bernard-Jannin. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Hydrology Expert | Water Resources Management | Environmental Modeling</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Last updated: February 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
