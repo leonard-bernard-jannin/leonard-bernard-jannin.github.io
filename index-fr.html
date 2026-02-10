@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Portfolio Version 2.0 - February 10, 2026 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,6 +11,30 @@
     <style>
 :root{--deep-ocean:#0a2e4d;--ocean-blue:#1d5a7d;--water:#2d7fa6;--light-water:#4ba3c9;--surf:#7dc8e3;--foam:#e8f4f8;--paper:#fafcfd;--text:#1a3a4d;--text-light:#4a6b7c;--shadow:rgba(29,90,125,0.12);--shadow-strong:rgba(29,90,125,0.2)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Lato',sans-serif;background:linear-gradient(135deg,var(--paper) 0%,var(--foam) 100%);color:var(--text);line-height:1.6;overflow-x:hidden;position:relative}body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 20% 30%,rgba(125,200,227,0.08) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(45,127,166,0.06) 0%,transparent 50%);pointer-events:none;z-index:0}body::after{content:'';position:fixed;bottom:0;left:0;width:100%;height:200px;background:linear-gradient(to top,rgba(29,90,125,0.03),transparent);pointer-events:none;z-index:0}.container{max-width:1200px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}header{padding:4rem 0 3rem;position:relative;animation:slideDown .9s ease-out}header::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100vw;height:3px;background:linear-gradient(90deg,transparent,var(--water) 20%,var(--ocean-blue) 50%,var(--water) 80%,transparent)}@keyframes slideDown{from{opacity:0;transform:translateY(-40px)}to{opacity:1;transform:translateY(0)}}h1{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:700;color:var(--deep-ocean);margin-bottom:.5rem;letter-spacing:-.02em}.tagline{font-size:1.35rem;color:var(--ocean-blue);font-weight:400;margin-bottom:1.5rem;letter-spacing:.02em}.contact-links{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:1.5rem}.contact-links a{color:var(--water);text-decoration:none;font-weight:500;border-bottom:2px solid transparent;transition:all .3s ease}.contact-links a:hover{color:var(--ocean-blue);border-bottom-color:var(--light-water)}section{margin-bottom:4.5rem;animation:fadeInUp .9s ease-out;animation-fill-mode:both}section:nth-child(1){animation-delay:.15s}section:nth-child(2){animation-delay:.25s}section:nth-child(3){animation-delay:.35s}section:nth-child(4){animation-delay:.45s}section:nth-child(5){animation-delay:.55s}@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}h2{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:600;color:var(--ocean-blue);margin-bottom:2.5rem;position:relative;display:inline-block}h2::after{content:'';position:absolute;bottom:-10px;left:0;width:80px;height:4px;background:linear-gradient(90deg,var(--water),var(--light-water));border-radius:2px}.about-content{font-size:1.15rem;line-height:1.9;max-width:900px;color:var(--text);background:white;padding:2.5rem;border-radius:8px;box-shadow:0 4px 20px var(--shadow);border-left:5px solid var(--water)}.about-content p{margin-bottom:1.2rem}.experience-item{background:white;padding:2.5rem;margin-bottom:2rem;border-left:5px solid var(--water);box-shadow:0 3px 15px var(--shadow);border-radius:6px;transition:all .4s ease;position:relative;overflow:hidden}.experience-item::before{content:'';position:absolute;top:0;right:0;width:150px;height:150px;background:radial-gradient(circle,rgba(125,200,227,0.1) 0%,transparent 70%);pointer-events:none}.experience-item:hover{transform:translateY(-4px);box-shadow:0 8px 25px var(--shadow-strong);border-left-color:var(--ocean-blue)}.experience-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem}.job-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:600;color:var(--deep-ocean)}.date-range{font-size:1rem;color:var(--text-light);font-weight:500;background:var(--foam);padding:.3rem .8rem;border-radius:4px}.company{font-size:1.15rem;color:var(--water);margin-bottom:1rem;font-weight:600}.experience-description{color:var(--text);line-height:1.8}.experience-description ul{margin-left:1.5rem;margin-top:.8rem}.experience-description li{margin-bottom:.7rem}.experience-description li::marker{color:var(--light-water)}.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}.skill-category{background:white;padding:2rem;border-radius:8px;box-shadow:0 3px 15px var(--shadow);border-top:4px solid var(--water);transition:all .3s ease}.skill-category:hover{transform:translateY(-4px);box-shadow:0 6px 20px var(--shadow-strong)}.skill-category h3{font-family:'Playfair Display',serif;color:var(--ocean-blue);margin-bottom:1.3rem;font-size:1.3rem;font-weight:600}.skill-category ul{list-style:none}.skill-category li{padding:.5rem 0;color:var(--text);position:relative;padding-left:1.5rem;line-height:1.6}.skill-category li::before{content:'◆';position:absolute;left:0;color:var(--light-water);font-size:.8rem}.education-item{background:white;padding:2rem 2.5rem;margin-bottom:1.8rem;border-left:5px solid var(--light-water);box-shadow:0 3px 15px var(--shadow);border-radius:6px;transition:all .3s ease}.education-item:hover{transform:translateX(8px);box-shadow:0 5px 20px var(--shadow-strong)}.degree{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:600;color:var(--deep-ocean);margin-bottom:.4rem}.school{color:var(--water);font-size:1.1rem;margin-bottom:.5rem;font-weight:500}.edu-date{color:var(--text-light);font-size:.95rem}.publications-content{background:white;padding:2.5rem;border-radius:8px;box-shadow:0 4px 20px var(--shadow);border-left:5px solid var(--water)}.pub-link{color:var(--water);text-decoration:none;border-bottom:1px solid transparent;transition:all .2s ease}.pub-link:hover{color:var(--ocean-blue);border-bottom-color:var(--ocean-blue)}.languages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}.language-item{background:white;padding:1.5rem;border-radius:6px;box-shadow:0 3px 12px var(--shadow);text-align:center;border-top:3px solid var(--light-water)}.language-name{font-weight:600;font-size:1.2rem;color:var(--ocean-blue);margin-bottom:.5rem}.language-level{color:var(--text-light);font-size:.95rem}footer{text-align:center;padding:3rem 0;margin-top:5rem;color:var(--text-light);position:relative}footer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:100vw;height:2px;background:linear-gradient(90deg,transparent,var(--light-water) 20%,var(--water) 50%,var(--light-water) 80%,transparent)}@media print{body{background:white}body::before,body::after{display:none}.experience-item,.skill-category,.education-item,.about-content,.publications-content{box-shadow:none;border:1px solid #ddd;page-break-inside:avoid}.experience-item:hover,.education-item:hover{transform:none}}@media (max-width:768px){h1{font-size:2.8rem}h2{font-size:1.8rem}.experience-header{flex-direction:column}.container{padding:0 1.5rem}.contact-links{gap:1.5rem}.about-content{padding:1.8rem}}
 header a button:hover{transform:translateY(-2px);box-shadow:0 4px 12px var(--shadow-strong);background:var(--foam)}
+.carousel-container{position:relative;max-width:1200px;margin:3rem auto;overflow:hidden;border-radius:12px;box-shadow:0 8px 30px var(--shadow-strong);background:white}
+.carousel-wrapper{position:relative;height:450px}
+.carousel-slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 0.6s ease;padding:3rem;display:flex;align-items:center;pointer-events:none}
+.carousel-slide.active{opacity:1;pointer-events:auto}
+.carousel-content{flex:1;padding-left:3rem}
+.carousel-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1.5rem;flex-wrap:wrap;gap:0.5rem}
+.carousel-title{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--deep-ocean);margin:0}
+.carousel-period{font-size:1rem;color:var(--text-light);font-weight:600;background:var(--foam);padding:0.4rem 1rem;border-radius:20px}
+.carousel-client{font-size:1.15rem;color:var(--water);font-weight:600;margin-bottom:1.2rem}
+.carousel-highlights{list-style:none;padding:0;margin:1.2rem 0}
+.carousel-highlights li{padding:0.4rem 0;color:var(--text);font-size:1.05rem;position:relative;padding-left:1.8rem}
+.carousel-highlights li::before{content:'✓';position:absolute;left:0;color:var(--light-water);font-weight:bold;font-size:1.2rem}
+.carousel-tech{display:flex;gap:0.8rem;flex-wrap:wrap;margin:1.2rem 0}
+.tech-badge{background:var(--foam);color:var(--ocean-blue);padding:0.4rem 1rem;border-radius:20px;font-size:0.9rem;font-weight:600;border:2px solid var(--light-water)}
+.carousel-link{display:inline-block;margin-top:1rem;padding:0.7rem 1.5rem;background:var(--water);color:white;text-decoration:none;border-radius:6px;font-weight:600;transition:all 0.3s ease}
+.carousel-link:hover{background:var(--ocean-blue);transform:translateY(-2px);box-shadow:0 4px 12px var(--shadow-strong)}
+.carousel-controls{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);display:flex;gap:0.8rem;z-index:10}
+.carousel-dot{width:12px;height:12px;border-radius:50%;background:var(--foam);border:2px solid var(--water);cursor:pointer;transition:all 0.3s ease}
+.carousel-dot.active{background:var(--water);transform:scale(1.3)}
+.carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);background:white;border:2px solid var(--water);color:var(--ocean-blue);width:45px;height:45px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.5rem;font-weight:bold;transition:all 0.3s ease;z-index:10}
+.carousel-arrow:hover{background:var(--water);color:white;transform:translateY(-50%) scale(1.1);box-shadow:0 4px 12px var(--shadow-strong)}
+.carousel-arrow.prev{left:1rem}
+.carousel-arrow.next{right:1rem}
+@media (max-width:768px){.carousel-slide{flex-direction:column;padding:2rem 1.5rem;height:auto;min-height:450px}.carousel-title{font-size:1.4rem}.carousel-arrow{width:40px;height:40px;font-size:1.2rem}.carousel-arrow.prev{left:0.5rem}.carousel-arrow.next{right:0.5rem}}
     </style>
 </head>
 <body>
@@ -24,18 +49,112 @@ header a button:hover{transform:translateY(-2px);box-shadow:0 4px 12px var(--sha
 <h1>Léonard Bernard-Jannin</h1>
 <p class="tagline">Expert en Ressources en Eau | Hydrologie, Modélisation & Gestion Environnementale</p>
 <div class="contact-links">
-<a href="/cdn-cgi/l/email-protection#610d4f0304130f0013050b000f0f080f21060c00080d4f020e0c">✉ <span class="__cf_email__" data-cfemail="c6aae8a4a3b4a8a7b4a2aca7a8a8afa886a1aba7afaae8a5a9ab">[email&#160;protected]</span></a>
+<a href="/cdn-cgi/l/email-protection#6804460a0d1a06091a0c020906060106280f05090104460b0705">✉ <span class="__cf_email__" data-cfemail="305c1e5255425e5142545a515e5e595e70575d51595c1e535f5d">[email&#160;protected]</span></a>
 <a href="tel:+33617289860">📱 +33 6 17 28 98 60</a>
 <a href="https://www.linkedin.com/in/l%C3%A9onard-bernard-jannin-9a35497a/" target="_blank">🔗 LinkedIn</a>
 <a href="https://www.researchgate.net/profile/Leonard-Bernard-Jannin" target="_blank">📚 ResearchGate</a>
 </div>
 </header>
 <main>
+<div class="carousel-container"><!-- Updated: 2026-02-10 v2 -->
+<div class="carousel-wrapper">
+<div class="carousel-slide active">
+<div class="carousel-content">
+<div class="carousel-header">
+<h3 class="carousel-title">Évaluation de la Capacité de Charge en Aquaculture Ostréicole</h3>
+<span class="carousel-period">2023-2025</span>
+</div>
+<div class="carousel-client">The Nature Conservancy Hong Kong</div>
+<ul class="carousel-highlights">
+<li>Collaboration internationale (ONG, Université, Gouvernement)</li>
+<li>Développement site web interactif & outils d'aide à la décision</li>
+<li>Planification aquaculture durable pour Deep Bay</li>
+</ul>
+<div class="carousel-tech">
+<span class="tech-badge">Chef de Projet</span>
+<span class="tech-badge">Modélisation Bassin-Côte</span>
+<span class="tech-badge">Planification Spatiale Marine</span>
+<span class="tech-badge">Capacité de Charge Aquacole</span>
+</div>
+<a href="https://www.deepbay.blue" target="_blank" class="carousel-link">🔗 Voir le Site du Projet →</a>
+</div>
+</div>
+<div class="carousel-slide">
+<div class="carousel-content">
+<div class="carousel-header">
+<h3 class="carousel-title">Conformité Directive Cadre sur l'Eau</h3>
+<span class="carousel-period">2023</span>
+</div>
+<div class="carousel-client">Municipalité de Ringkøbing-Skjern, Danemark</div>
+<ul class="carousel-highlights">
+<li>Aide à la décision environnementale pour les élus</li>
+<li>Scénarios de gestion : Impact de la restauration de zones humides</li>
+<li>Coordination multi-acteurs avec autorités municipales</li>
+</ul>
+<div class="carousel-tech">
+<span class="tech-badge">Chef de Projet</span>
+<span class="tech-badge">Modélisation Bassin-Côte</span>
+<span class="tech-badge">Conformité DCE</span>
+<span class="tech-badge">Évaluation Eutrophisation</span>
+</div>
+<a href="https://www.rksk.dk/Files/Files/Om%20Kommunen/Raad-naevn-syn-kommissioner/Kystvandraad%202023/Bilag-5-LLE-Modelling-of-Ringkobing-Fjord-and-the-catchment-21122023.pdf" target="_blank" class="carousel-link">🔗 Voir le Rapport →</a>
+</div>
+</div>
+<div class="carousel-slide">
+<div class="carousel-content">
+<div class="carousel-header">
+<h3 class="carousel-title">Modélisation Intégrée Multi-Échelle de la Qualité de l'Eau</h3>
+<span class="carousel-period">2018-2023</span>
+</div>
+<div class="carousel-client">Projet SWELL – AFBI, Irlande du Nord</div>
+<ul class="carousel-highlights">
+<li>Responsable Technique – Intégration modèles multi-échelles</li>
+<li>Intégration Réseau urbain → Bassin versant → Écosystème côtier</li>
+<li>Suivi pollution et évaluation scénarios de gestion</li>
+</ul>
+<div class="carousel-tech">
+<span class="tech-badge">Modélisation Bassin-Côte</span>
+<span class="tech-badge">Qualité Eau : Nutriments & Bactéries</span>
+<span class="tech-badge">Analyse Sources Pollution</span>
+</div>
+<a href="https://www.researchgate.net/publication/377656456_SWELL_Final_Report" target="_blank" class="carousel-link">🔗 Voir le Rapport →</a>
+</div>
+</div>
+<div class="carousel-slide">
+<div class="carousel-content">
+<div class="carousel-header">
+<h3 class="carousel-title">Évaluation de l'Écosystème et de la Qualité de l'Eau Côtière</h3>
+<span class="carousel-period">2020-2022</span>
+</div>
+<div class="carousel-client">Living With Water Project – AFBI, Irlande du Nord</div>
+<ul class="carousel-highlights">
+<li>Développement & application modèles bassin versant et écologique pour Belfast Lough</li>
+<li>Dynamique des nutriments et identification sources de pollution</li>
+<li>Évaluation des impacts environnementaux pour gestion côtière</li>
+</ul>
+<div class="carousel-tech">
+<span class="tech-badge">Modélisation Bassin-Côte</span>
+<span class="tech-badge">Qualité Eau : Nutriments & Bactéries</span>
+<span class="tech-badge">Analyse Sources Pollution</span>
+</div>
+<a href="https://www.researchgate.net/publication/381965196_Development_and_application_of_an_ecosystem_model_for_Belfast_Lough_Northern_Ireland_LWWP_Report" target="_blank" class="carousel-link">🔗 Voir la Publication →</a>
+</div>
+</div>
+</div>
+<div class="carousel-arrow prev" onclick="moveCarousel(-1)">‹</div>
+<div class="carousel-arrow next" onclick="moveCarousel(1)">›</div>
+<div class="carousel-controls">
+<span class="carousel-dot active" onclick="goToSlide(0)"></span>
+<span class="carousel-dot" onclick="goToSlide(1)"></span>
+<span class="carousel-dot" onclick="goToSlide(2)"></span>
+<span class="carousel-dot" onclick="goToSlide(3)"></span>
+</div>
+</div>
 <section id="about">
 <h2>Profil</h2>
 <div class="about-content">
 <p>Expert en ressources en eau avec un doctorat en hydrologie, je me spécialise dans la gestion de systèmes hydriques complexes à travers la modélisation avancée et l'aide à la décision basée sur les données. Fort de plus de 10 ans d'expérience sur des projets internationaux, je combine expertise hydrologique, capacités de modélisation intégrée et connaissances environnementales pour apporter des solutions pratiques en gestion durable des ressources en eau.</p>
-<p>Je dirige des projets techniques, coordonne des équipes pluridisciplinaires et développe des plateformes de modélisation pour évaluer la disponibilité en eau, les impacts sur la qualité et les scénarios de gestion pour les bassins versants, les eaux côtières et les systèmes aquacoles.</p>
+<p>Je dirige des projets techniques, coordonne des équipes pluridisciplinaires et développe des plateformes de modélisation pour évaluer la disponibilité en eau, les impacts sur la qualité et les scénarios de gestion pour les bassins versants, les eaux côtières et les systèmes aquacoles. Projets récents incluent l'évaluation de capacité de charge aquacole à Hong Kong (2023-25), conformité Directive Cadre sur l'Eau au Danemark (2023), et modélisation intégrée bassin versant-côte en Irlande du Nord (2018-23).</p>
 </div>
 </section>
 
@@ -122,7 +241,7 @@ header a button:hover{transform:translateY(-2px);box-shadow:0 4px 12px var(--sha
 <div class="experience-description">
 <p>Direction de projets internationaux de modélisation des ressources en eau avec focus sur les systèmes intégrés bassin versant-eaux côtières.</p>
 <ul>
-<li>Gestion de 9+ projets internationaux (3 au Danemark, 1 en Irlande du Nord, 6 projets finalisés au Danemark, Irlande du Nord et Hong Kong)</li>
+<li>Direction de 9+ projets internationaux en tant que Chef de Projet ou Responsable Technique, incluant évaluation capacité aquacole à Hong Kong (2023-25), modélisation conformité DCE au Danemark (2023), et modélisation intégrée multi-échelle en Irlande du Nord (SWELL 2018-23, LWWP 2020-22)</li>
 <li>Coordination complète des projets : planification, budgétisation, gestion des ressources humaines, réunions internationales avec des parties prenantes variées (élus, ingénieurs, ONGs, agences publiques)</li>
 <li>Responsable technique pour l'hydrologie et la modélisation intégrée bassin versant-eaux côtières</li>
 <li>Modélisation et analyse des flux d'eau, de nutriments et de contaminants ; évaluation de scénarios de gestion et de changement climatique</li>
@@ -222,7 +341,7 @@ header a button:hover{transform:translateY(-2px);box-shadow:0 4px 12px var(--sha
 <li style="padding:1rem 0;border-bottom:1px solid var(--foam);line-height:1.7"><strong>1.</strong> Bernard-Jannin, L., Ferreira, J.G., et al. (2025). <em>Hong Kong Deep Bay Oyster Aquaculture Carrying Capacity Assessment</em> (香港后海灣牡蠣養殖承載力評估). The Nature Conservancy Hong Kong. <a href="https://www.deepbay.blue" target="_blank" class="pub-link">Project Website →</a></li>
 <li style="padding:1rem 0;border-bottom:1px solid var(--foam);line-height:1.7"><strong>2.</strong> Ferreira, J.G., Bernard-Jannin, L., Cubillo, A.M., et al. (2024). <em>SWELL - Shared Waters Enhancement and Loughs Legacy Final Report</em>. Sustainable management of wastewater, land use and aquaculture in Lough Foyle and Carlingford Lough catchments, Northern Ireland. <a href="https://www.researchgate.net/publication/377656456_SWELL_Final_Report" target="_blank" class="pub-link">ResearchGate →</a></li>
 <li style="padding:1rem 0;border-bottom:1px solid var(--foam);line-height:1.7"><strong>3.</strong> Bernard-Jannin, L., Ferreira, J.G., Lencart e Silva, J., Cubillo, A.M., Diedricks, G. (2023). <em>Modelling of Ringkøbing Fjord to support policy-makers for compliance with the EU Water Framework Directive</em>. Ringkøbing-Skjern Municipality, Denmark. <a href="https://www.rksk.dk/Files/Files/Om%20Kommunen/Raad-naevn-syn-kommissioner/Kystvandraad%202023/Bilag-5-LLE-Modelling-of-Ringkobing-Fjord-and-the-catchment-21122023.pdf" target="_blank" class="pub-link">PDF →</a></li>
-<li style="padding:1rem 0;border-bottom:1px solid var(--foam);line-height:1.7"><strong>4.</strong> Ferreira, J.G., Bernard-Jannin, L., Cubillo, A.M., Gomes, D. (2022). <em>Development and application of an ecosystem model for Belfast Lough, Northern Ireland</em>. LWWP Report. <a href="https://www.researchgate.net/publication/360690829_Development_and_application_of_an_ecosystem_model_for_Belfast_Lough_Northern_Ireland_LWWP_Report" target="_blank" class="pub-link">ResearchGate →</a></li>
+<li style="padding:1rem 0;border-bottom:1px solid var(--foam);line-height:1.7"><strong>4.</strong> Ferreira, J.G., Bernard-Jannin, L., Cubillo, A.M., Gomes, D. (2022). <em>Development and application of an ecosystem model for Belfast Lough, Northern Ireland</em>. LWWP Report. <a href="https://www.researchgate.net/publication/381965196_Development_and_application_of_an_ecosystem_model_for_Belfast_Lough_Northern_Ireland_LWWP_Report" target="_blank" class="pub-link">ResearchGate →</a></li>
 </ul>
 <h4 style="color:var(--ocean-blue);margin-bottom:1rem;margin-top:2rem;font-size:1.2rem">Publications Récentes à Fort Impact (2020-2023) :</h4>
 <ul style="list-style:none;padding:0">
@@ -280,15 +399,69 @@ header a button:hover{transform:translateY(-2px);box-shadow:0 4px 12px var(--sha
 </div>
 </section>
 
+
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-document.getElementById('togglePublications').addEventListener('click',function(){var pubList=document.getElementById('publicationsList');var button=this;if(pubList.style.display==='none'){pubList.style.display='block';button.textContent='Masquer les Publications';button.style.background='var(--ocean-blue)'}else{pubList.style.display='none';button.textContent='Voir la Liste Complète des Publications';button.style.background='var(--water)'}});document.getElementById('togglePublications').addEventListener('mouseenter',function(){this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px var(--shadow-strong)'});document.getElementById('togglePublications').addEventListener('mouseleave',function(){this.style.transform='translateY(0)';this.style.boxShadow='none'});
+document.addEventListener('DOMContentLoaded', function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let autoSlideInterval;
+    
+    function showSlide(n) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+    
+    window.moveCarousel = function(direction) {
+        showSlide(currentSlide + direction);
+        resetAutoSlide();
+    };
+    
+    window.goToSlide = function(n) {
+        showSlide(n);
+        resetAutoSlide();
+    };
+    
+    function autoSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+    
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(autoSlide, 8000);
+    }
+    
+    resetAutoSlide();
+    
+    document.getElementById('togglePublications').addEventListener('click', function() {
+        var pubList = document.getElementById('publicationsList');
+        var button = this;
+        if (pubList.style.display === 'none') {
+            pubList.style.display = 'block';
+            button.textContent = 'Masquer les Publications';
+            button.style.background = 'var(--ocean-blue)';
+        } else {
+            pubList.style.display = 'none';
+            button.textContent = 'Voir la Liste Complète des Publications';
+            button.style.background = 'var(--water)';
+        }
+    });
+    
+    document.getElementById('togglePublications').addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px)';
+        this.style.boxShadow = '0 4px 12px var(--shadow-strong)';
+    });
+    
+    document.getElementById('togglePublications').addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = 'none';
+    });
+});
 </script>
 </main>
 <footer>
-<p>&copy; 2026 Léonard Bernard-Jannin. All rights reserved.</p>
-<p style="margin-top:.5rem;font-size:.9rem">Expert en Ressources en Eau | Hydrologie & Modélisation | Gestion Environnementale</p>
-<p style="margin-top:.5rem;font-size:.85rem">Dernière mise à jour : Février 2026</p>
-</footer>
-</div>
-</body>
-</html>
+<p>&copy; 2026 Léonard Bernard-Jannin. Tous droits réservés.</p
